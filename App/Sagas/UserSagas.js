@@ -63,6 +63,13 @@ export function * fetchToken (api, action) {
   if (token !== TOKEN.default && token !== TOKEN.empty) {
     /* Fetch user info using the token */
     const response = yield call(api.user, token)
+
+    // Somehow API returns 200 when user not found..
+    if (response.ok && !response.data) {
+      SecureStorage.setEntry(TOKEN.token, TOKEN.empty)
+      return yield put(UserActions.fetchToken())
+    }
+
     /* Token was valid and user found */
     if (response.ok) {
       const user = response.data
@@ -93,7 +100,7 @@ export function * fetchToken (api, action) {
     }
   } else {
     /* Show permission prompt for the first call (iOS) */
-    yield call(FCM.requestPermissions)
+    FCM.requestPermissions()
     /* Get token for push notifications */
     const deviceid = yield call(FCM.getFCMToken)
     console.log('Anon device id: ' + deviceid)

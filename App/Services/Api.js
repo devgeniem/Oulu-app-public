@@ -2,7 +2,7 @@
 import apisauce from 'apisauce'
 
 // our "constructor"
-const create = (baseURL = 'http://burt.geniem.com:1236/api/') => {
+const create = (baseURL = 'https://ouluappapi.production.geniem.io/api/') => {
   // ------
   // STEP 1
   // ------
