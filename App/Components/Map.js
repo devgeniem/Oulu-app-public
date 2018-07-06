@@ -10,25 +10,28 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
 export default class Map extends React.PureComponent {
   renderMarkers = (events) => {
     return events.map((event, index) => {
-      const latLng = {latitude: event.lat, longitude: event.long}
-      const category = MAIN_CATEGORIES.find(category => category.type === event.cat)
-      const calloutOffset = {x: 1, y: 0.5} // Positioning might need some re-adjusting later
+      if (event.lat && event.long) {
+        const latLng = {latitude: event.lat, longitude: event.long}
+        const category = MAIN_CATEGORIES.find(category => category.type === event.cat)
+        const calloutOffset = {x: 1, y: 0.5} // Positioning might need some re-adjusting later
 
-      return (
-        <MapView.Marker
-          pinColor={category.color}
-          coordinate={latLng}
-          key={index}
-          calloutOffset={calloutOffset}
-          calloutAnchor={calloutOffset}
-          onCalloutPress={() => this.onCalloutPress(event)}
-        >
-          <Icon name='map-pin' size={36} color={category.color} />
-          <MapView.Callout tooltip>
-            <CustomCallout text={event.title} />
-          </MapView.Callout>
-        </MapView.Marker>
-      )
+        return (
+          <MapView.Marker
+            pinColor={category.color}
+            coordinate={latLng}
+            key={index}
+            calloutOffset={calloutOffset}
+            calloutAnchor={calloutOffset}
+            onCalloutPress={() => this.onCalloutPress(event)}
+          >
+            <Icon name='map-pin' size={36} color={category.color} />
+            <MapView.Callout tooltip>
+              <CustomCallout text={event.title} />
+            </MapView.Callout>
+          </MapView.Marker>
+        )
+      }
+      return null
     })
   }
 
