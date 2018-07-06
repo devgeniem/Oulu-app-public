@@ -16,7 +16,7 @@ import { AdsTypes } from '../Redux/AdsRedux'
 /* ------------- Sagas ------------- */
 
 import { startup } from './StartupSagas'
-import { fetchEvents, refreshEvents, participate, createEvent } from './EventsSaga'
+import { fetchEvents, fetchMoreEvents, refreshEvents, participate, createEvent } from './EventsSaga'
 import { fetchToken, login, logout, updateSearchParameters, deleteStatistics, updateUser } from './UserSagas'
 import { uploadImage } from './UploadSagas'
 import { getInitialNotification, openNotification } from './FCMSagas'
@@ -36,6 +36,7 @@ export default function * root () {
     takeLatest(EventsTypes.REFRESH_EVENTS, refreshEvents),
     takeLatest(StartupTypes.STARTUP, startup, api),
     takeLatest(EventsTypes.FETCH_EVENTS, fetchEvents, api),
+    takeLatest(EventsTypes.FETCH_MORE_EVENTS, fetchMoreEvents, api),
     takeLatest(UserTypes.FETCH_TOKEN, fetchToken, api),
     takeLatest(UserTypes.LOGIN_REQUEST, login, api),
     takeLatest(UserTypes.LOGOUT, logout, api),

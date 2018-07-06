@@ -1,5 +1,7 @@
 import I18n from 'react-native-i18n'
 
+export const PAGE_SIZE = 50
+
 export const EVENT_MUSIC = 'musiikki'
 export const EVENT_CULTURE = 'kulttuuri'
 export const EVENT_SPORTS = 'urheilu'

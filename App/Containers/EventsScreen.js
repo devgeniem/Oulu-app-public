@@ -169,6 +169,13 @@ class EventsScreen extends React.Component {
   }
   **/
 
+  onEndReached = () => {
+    if (!this.props.fetching && !this.props.fetchingMore && !this.props.allFetched) {
+      const searchTerm = this.state.searchTerm || null
+      this.props.fetchMoreEvents(searchTerm)
+    }
+  }
+
   renderPage = () => {
     if (!this.props.fetchingToken && this.props.token) {
       const { clamped, scrollY, searchTerm } = this.state
@@ -190,6 +197,7 @@ class EventsScreen extends React.Component {
             renderItem={this.renderItem}
             ItemSeparatorComponent={this.listSeparator}
             onRefresh={this.onRefresh}
+            onEndReached={this.onEndReached}
             refreshing={refreshing}
             progressViewOffset={HEADER_MAX_HEIGHT}
             contentOffset={IOS_CONTENT_OFFSET}
@@ -231,6 +239,8 @@ const mapStateToProps = (state) => {
   return {
     events: state.events.events,
     fetching: state.events.fetching,
+    fetchingMore: state.events.fetchingMore,
+    allFetched: state.events.allFetched,
     refreshing: state.events.refreshing,
     fetchingToken: state.user.fetchingToken,
     user: state.user.user,
@@ -245,6 +255,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchEvents: (searchTerm) => dispatch(EventsActions.fetchEvents(searchTerm)),
+    fetchMoreEvents: (searchTerm) => dispatch(EventsActions.fetchMoreEvents(searchTerm)),
     selectEvent: (event) => dispatch(EventsActions.selectEvent(event)),
     refreshEvents: () => dispatch(EventsActions.refreshEvents()),
     resetFetchEventsError: () => dispatch(EventsActions.resetFetchEventsError())
