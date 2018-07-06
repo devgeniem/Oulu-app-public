@@ -6,6 +6,10 @@ export default StyleSheet.create({
     height: 250,
     width: '100%'
   },
+  noImage: {
+    height: 250,
+    backgroundColor: Colors.errorMessageBackground
+  },
   imageFooter: {
     width: '100%',
     height: 20,

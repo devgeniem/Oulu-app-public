@@ -15,6 +15,10 @@ export default StyleSheet.create({
     height: 200,
     width: '100%'
   },
+  noImage: {
+    height: 200,
+    backgroundColor: Colors.errorMessageBackground
+  },
   title: {
     color: Colors.baseFontColor,
     fontSize: titleFontSize,

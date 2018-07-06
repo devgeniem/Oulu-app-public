@@ -33,8 +33,16 @@ export default class EventListItem extends React.PureComponent {
     }
   }
 
+  renderPicture = () => {
+    const { picture } = this.props.item
+    if (picture) {
+      return <Image source={{uri: picture}} style={styles.image} />
+    }
+    return <View style={styles.noImage} />
+  }
+
   render () {
-    const {organiser, cat, desc, picture, title, startDate, endDate, participantCount, subcats} = this.props.item
+    const {organiser, cat, desc, title, startDate, endDate, participantCount, subcats} = this.props.item
     const categoryColor = this.categoryHeaderColor(cat)
     const badgeColor = this.imageBadgeColor(cat)
     const dateDisplay = DateUtil.displayPeriod(startDate, endDate)
@@ -42,7 +50,7 @@ export default class EventListItem extends React.PureComponent {
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={this.open} delayPressIn={1}>
-          <Image source={{uri: picture}} style={styles.image} />
+          { this.renderPicture() }
           <Text style={[styles.imageBadge, badgeColor]}>{organiser}</Text>
           <View style={styles.textContainer}>
             <Text style={[styles.eventHeader, categoryColor]}>{I18n.t(cat)}</Text>
