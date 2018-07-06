@@ -21,6 +21,9 @@ export default class BackHeader extends React.PureComponent {
           name='arrow-right'
           size={12}
           color={Colors.white}
+          paddingLeft={6}
+          paddingTop={6}
+          paddingBottom={6}
         />
       )
     }
