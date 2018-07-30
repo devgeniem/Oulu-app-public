@@ -4,11 +4,11 @@ import Icon from './Icon'
 
 export default class IconButton extends React.PureComponent {
   render () {
-    const { name, size, color, style, onPress } = this.props
+    const { name, size, color, style, iconStyle, onPress } = this.props
     const hitSlop = { top: 5, left: 5, bottom: 5, right: 5 }
     return (
       <TouchableOpacity onPress={onPress} style={style} hitSlop={hitSlop} >
-        <Icon name={name} size={size} color={color} />
+        <Icon name={name} size={size} color={color} style={iconStyle} />
       </TouchableOpacity>
     )
   }

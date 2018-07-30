@@ -21,6 +21,7 @@ export default class BackHeader extends React.PureComponent {
           name='arrow-right'
           size={12}
           color={Colors.white}
+          iconStyle={styles.backButtonIcon}
         />
       )
     }

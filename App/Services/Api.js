@@ -34,9 +34,9 @@ const create = (baseURL = 'https://ouluappapi.production.geniem.io/api/') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const fetchEvents = (token, categories, subcategories, from, to, search) => api.get(
+  const fetchEvents = (token, categories, subcategories, from, to, search, limit, page) => api.get(
     'event',
-    { categories, subcategories, from, to, search },
+    { categories, subcategories, from, to, search, limit, page },
     {headers: { 'Authorization': `Bearer ${token}` }}
   )
   const fetchAds = (token) => api.get('/ad', {}, {headers: { 'Authorization': `Bearer ${token}` }})

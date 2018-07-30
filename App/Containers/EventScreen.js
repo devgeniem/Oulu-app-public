@@ -63,13 +63,21 @@ class EventScreen extends React.Component {
 
   renderTicketSection = (price) => price ? <TicketSection title={I18n.t('tickets')} price={price} /> : null
 
+  renderPicture = () => {
+    const { picture } = this.props.selectedEvent
+    if (picture) {
+      return <Image source={{uri: picture}} style={styles.image} />
+    }
+    return <View style={styles.noImage} />
+  }
+
   render () {
-    const {organiser, desc, picture, title, startDate, endDate, place, price, subcats, polls} = this.props.selectedEvent
+    const {organiser, desc, title, startDate, endDate, place, price, subcats, polls} = this.props.selectedEvent
     const dateDisplay = DateUtil.displayPeriod(startDate, endDate)
 
     return (
       <ScrollView style={styles.container}>
-        <Image source={{uri: picture}} style={styles.image} />
+        { this.renderPicture() }
         <View style={styles.titleContainer}>
           <Text style={styles.title}>{title}</Text>
         </View>
