@@ -14,7 +14,6 @@ export default class EventListHeaderFAB extends React.PureComponent {
 
   toEventTypes = () => this.props.navigation.navigate('EventTypesSelectionScreen')
   toTimeSelection = () => this.props.navigation.navigate('TimeSelectionScreen')
-  toEventCreate = () => this.props.navigation.navigate('CreateEventScreen')
 
   renderItem = (title, icon, onPress) => (
     <ActionButton.Item
@@ -35,18 +34,10 @@ export default class EventListHeaderFAB extends React.PureComponent {
   )
 
   renderButtons = (user) => {
-    if (user && user.username) {
-      return [
-        this.renderItem(I18n.t('eventTypes'), 'tapahtumatyypit', this.toEventTypes),
-        this.renderItem(I18n.t('setTimeWindow'), 'aikaikkuna', this.toTimeSelection),
-        this.renderItem(I18n.t('createEvent').toLowerCase(), 'lisaa-tapahtuma', this.toEventCreate)
-      ]
-    } else {
-      return [
-        this.renderItem(I18n.t('eventTypes'), 'tapahtumatyypit', this.toEventTypes),
-        this.renderItem(I18n.t('setTimeWindow'), 'aikaikkuna', this.toTimeSelection)
-      ]
-    }
+    return [
+      this.renderItem(I18n.t('eventTypes'), 'tapahtumatyypit', this.toEventTypes),
+      this.renderItem(I18n.t('setTimeWindow'), 'aikaikkuna', this.toTimeSelection)
+    ]
   }
 
   render () {
