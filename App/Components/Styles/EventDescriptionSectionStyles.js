@@ -23,6 +23,19 @@ export default StyleSheet.create({
     fontFamily: Fonts.type.heavy,
     marginVertical: 5
   },
+  priceTitle: {
+    color: Colors.baseFontColor,
+    fontSize: fontSize,
+    fontFamily: Fonts.type.heavy,
+    marginTop: 10
+  },
+  priceValue: {
+    color: Colors.baseFontColor,
+    fontSize: fontSize,
+    fontFamily: Fonts.type.medium,
+    marginBottom: 5,
+    lineHeight: 24
+  },
   container: {
     paddingHorizontal: 25,
     paddingVertical: 5
