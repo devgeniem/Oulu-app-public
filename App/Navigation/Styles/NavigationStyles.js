@@ -12,6 +12,11 @@ export default StyleSheet.create({
   participantCountContainer: {
     flexDirection: 'row'
   },
+  backButtonIcon: {
+    paddingLeft: 6,
+    paddingTop: 6,
+    paddingBottom: 6
+  },
   leftIcon: {
     position: 'absolute',
     left: 20
