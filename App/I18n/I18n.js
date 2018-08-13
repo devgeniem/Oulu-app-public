@@ -7,6 +7,8 @@ I18n.translations = {
   fi: require('./languages/fi.json')
 }
 
+I18n.defaultLocale = 'fi'
+
 let languageCode = I18n.locale.substr(0, 2)
 
 switch (languageCode) {
