@@ -28,7 +28,7 @@
   "dependencies": {
     "apisauce": "^0.14.2",
     "format-json": "^1.0.3",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.10",
     "moment": "^2.20.1",
     "prop-types": "^15.5.10",
     "querystringify": "0.0.4",

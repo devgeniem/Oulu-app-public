@@ -3,6 +3,12 @@
 
 * Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
 
+## pre-install: Google maps and FCM
+There are three files outside version control that are required to run the app:
+1) .env containing google maps secret, this is placed in project root level
+2) FCM config json for android, placed in ./android/app/google-services.json
+3) FCM config plist for iOS, placed in ./ios/OuluApp/GoogleService-Info.plist
+
 ## :arrow_up: How to Setup
 
 **Step 1:** git clone this repo:
@@ -12,7 +18,6 @@
 **Step 3:** Install the Application with `yarn` or `npm i`
 
 **Step 4:** Only for iOS (close xcode before running this step): cd to ios/ directory and run pod install (cocoapods must be installed for this step to work).
-
 
 ## :arrow_forward: How to Run App
 
