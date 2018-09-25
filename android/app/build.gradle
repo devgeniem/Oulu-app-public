@@ -101,7 +101,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.geniem.ouluapp"
+        applicationId "fi.oulu.ouluapp"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1

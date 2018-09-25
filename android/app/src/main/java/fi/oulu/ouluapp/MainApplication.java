@@ -1,4 +1,4 @@
-package com.geniem.ouluapp;
+package fi.oulu.ouluapp;
 
 import android.app.Application;
 
