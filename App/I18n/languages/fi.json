@@ -120,5 +120,6 @@
   "logoutError": "Jokin meni mönkään - uloskirjautuminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "participateError": "Jokin meni mönkään - osallistuminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "loginError": "Jokin meni mönkään. Tarkista verkkoyhteys ja käynnistä ohjelma uudestaan.",
-  "imageUploadError": "Jokin meni mönkään - kuvan lataaminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys."
+  "imageUploadError": "Jokin meni mönkään - kuvan lataaminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
+  "links": "Linkkipankki"
 }

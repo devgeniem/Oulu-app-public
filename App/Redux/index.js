@@ -9,7 +9,8 @@ export const reducers = combineReducers({
   user: require('./UserRedux').reducer,
   upload: require('./UploadRedux').reducer,
   poll: require('./PollRedux').reducer,
-  ads: require('./AdsRedux').reducer
+  ads: require('./AdsRedux').reducer,
+  links: require('./LinksRedux').reducer
 })
 
 export default () => {

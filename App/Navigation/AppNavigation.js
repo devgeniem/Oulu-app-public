@@ -10,6 +10,7 @@ import MapScreen from '../Containers/MapScreen'
 import PollsScreen from '../Containers/PollsScreen'
 import PollScreen from '../Containers/PollScreen'
 import InstructionsScreen from '../Containers/InstructionsScreen'
+import LinksScreen from '../Containers/LinksScreen'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
@@ -23,7 +24,8 @@ const PrimaryNav = StackNavigator({
   MapScreen: { screen: MapScreen },
   PollsScreen: { screen: PollsScreen },
   PollScreen: { screen: PollScreen },
-  InstructionsScreen: { screen: InstructionsScreen }
+  InstructionsScreen: { screen: InstructionsScreen },
+  LinksScreen: { screen: LinksScreen }
 }, {
   // Default config for all screens
   initialRouteName: 'EventsScreen',

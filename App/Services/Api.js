@@ -54,6 +54,7 @@ const create = (baseURL = 'https://ouluappapi.production.geniem.io/api/') => {
   const uploadImage = (dataUri, filename, filetype) => api.post('imageupload', {data_uri: dataUri, filename, filetype})
   const deleteStatistics = (token) => api.post('me/deleteStatistics', {}, {headers: { 'Authorization': `Bearer ${token}` }})
   const createEvent = (token, event) => api.post(`event`, event, {headers: { 'Authorization': `Bearer ${token}` }})
+  // const fetchLinks = (token) => api.get('', {}, {headers: { 'Authorization': `Bearer ${token}` }})
 
   // ------
   // STEP 3
