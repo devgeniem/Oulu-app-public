@@ -7,6 +7,24 @@ import BackHeader from '../Navigation/BackHeader'
 import LinkItem from '../Components/LinkItem'
 import styles from './Styles/LinksScreenStyles'
 
+const LINKS = [
+  {
+    title: 'Oulun kaupunki',
+    href: 'https://www.ouka.fi/etusivu',
+    openInWebView: true
+  },
+  {
+    title: 'Kirjasto',
+    href: 'https://www.ouka.fi/oulu/kirjasto',
+    openInWebView: false
+  },
+  {
+    title: 'Google',
+    href: 'https://google.fi/',
+    openInWebView: false
+  }
+]
+
 class LinksScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     header: <BackHeader title={I18n.t('links')} back={navigation.goBack} />
@@ -33,7 +51,7 @@ class LinksScreen extends React.Component {
     return (
       <View style={styles.container}>
         <FlatList
-          data={[]}
+          data={LINKS}
           keyExtractor={this.keyExtractor}
           renderItem={this.renderItem}
         />

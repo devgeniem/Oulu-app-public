@@ -4,7 +4,6 @@ import EventScreen from '../Containers/EventScreen'
 import MenuScreen from '../Containers/MenuScreen'
 import TimeSelectionScreen from '../Containers/TimeSelectionScreen'
 import EventTypesSelectionScreen from '../Containers/EventTypesSelectionScreen'
-import LoginScreen from '../Containers/LoginScreen'
 import ProfileScreen from '../Containers/ProfileScreen'
 import MapScreen from '../Containers/MapScreen'
 import PollsScreen from '../Containers/PollsScreen'
@@ -19,7 +18,6 @@ const PrimaryNav = StackNavigator({
   MenuScreen: { screen: MenuScreen },
   TimeSelectionScreen: { screen: TimeSelectionScreen },
   EventTypesSelectionScreen: { screen: EventTypesSelectionScreen },
-  LoginScreen: { screen: LoginScreen },
   ProfileScreen: { screen: ProfileScreen },
   MapScreen: { screen: MapScreen },
   PollsScreen: { screen: PollsScreen },
