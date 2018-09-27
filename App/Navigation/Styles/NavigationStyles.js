@@ -53,13 +53,6 @@ export default StyleSheet.create({
   loginHeader: {
     backgroundColor: Colors.loginHeader
   },
-  createEventHeader: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: Colors.createEventHeader
-  },
   titleText: {
     fontSize: 14,
     fontWeight: '500',

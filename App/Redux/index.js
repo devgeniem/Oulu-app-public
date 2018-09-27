@@ -7,7 +7,6 @@ export const reducers = combineReducers({
   nav: require('./NavigationRedux').reducer,
   events: require('./EventsRedux').reducer,
   user: require('./UserRedux').reducer,
-  upload: require('./UploadRedux').reducer,
   poll: require('./PollRedux').reducer,
   ads: require('./AdsRedux').reducer,
   links: require('./LinksRedux').reducer

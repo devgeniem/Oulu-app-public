@@ -16,12 +16,8 @@ const { Types, Creators } = createActions({
   participate: ['userId', 'eventId'],
   participateError: ['participateError'],
   participateSuccess: ['event'],
-  createEvent: ['event'],
-  createEventError: ['createError'],
-  createEventSuccess: ['event'],
   resetFetchEventsError: null,
-  resetParticipateError: null,
-  resetCreateEventError: null
+  resetParticipateError: null
 })
 
 export const EventsTypes = Types
@@ -37,8 +33,6 @@ export const INITIAL_STATE = Immutable({
   page: 1,
   error: null,
   selectedEvent: null,
-  creating: false,
-  createError: null,
   participateError: null
 })
 
@@ -103,14 +97,6 @@ export const participateSuccess = (state, { event }) => {
   return state.merge({ events, selectedEvent: event, participateError: null })
 }
 
-export const createEvent = (state) => state.merge({ creating: true, createError: null })
-
-export const createEventSuccess = (state, { event }) =>
-  state.merge({ creating: false, events: [...state.events, event], createError: null })
-
-export const createEventError = (state, { createError }) => state.merge({ creating: false, createError })
-export const resetCreateEventError = (state) => state.merge({ createError: null })
-
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.FETCH_EVENTS]: fetchEvents,
   [Types.FETCH_EVENTS_SUCCESS]: fetchEventsSuccess,
@@ -124,9 +110,5 @@ export const reducer = createReducer(INITIAL_STATE, {
   [Types.PARTICIPATE]: participate,
   [Types.PARTICIPATE_ERROR]: participateError,
   [Types.RESET_PARTICIPATE_ERROR]: resetParticipateError,
-  [Types.PARTICIPATE_SUCCESS]: participateSuccess,
-  [Types.CREATE_EVENT]: createEvent,
-  [Types.CREATE_EVENT_SUCCESS]: createEventSuccess,
-  [Types.CREATE_EVENT_ERROR]: createEventError,
-  [Types.RESET_CREATE_EVENT_ERROR]: resetCreateEventError
+  [Types.PARTICIPATE_SUCCESS]: participateSuccess
 })

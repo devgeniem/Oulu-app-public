@@ -8,7 +8,6 @@ import DebugConfig from '../Config/DebugConfig'
 import { StartupTypes } from '../Redux/StartupRedux'
 import { EventsTypes } from '../Redux/EventsRedux'
 import { UserTypes } from '../Redux/UserRedux'
-import { UploadTypes } from '../Redux/UploadRedux'
 import { PollTypes } from '../Redux/PollRedux'
 import { FCMTypes } from '../Redux/FCMRedux'
 import { AdsTypes } from '../Redux/AdsRedux'
@@ -16,9 +15,8 @@ import { AdsTypes } from '../Redux/AdsRedux'
 /* ------------- Sagas ------------- */
 
 import { startup } from './StartupSagas'
-import { fetchEvents, fetchMoreEvents, refreshEvents, participate, createEvent } from './EventsSaga'
+import { fetchEvents, fetchMoreEvents, refreshEvents, participate } from './EventsSaga'
 import { fetchToken, login, logout, updateSearchParameters, deleteStatistics, updateUser } from './UserSagas'
-import { uploadImage } from './UploadSagas'
 import { getInitialNotification, openNotification } from './FCMSagas'
 import { fetchPolls, isPollFinished, refreshPolls, submitPoll, getPollCount } from './PollSagas'
 import { fetchAds } from './AdsSagas'
@@ -42,8 +40,6 @@ export default function * root () {
     takeLatest(UserTypes.LOGOUT, logout, api),
     takeLatest(UserTypes.UPDATE_SEARCH, updateSearchParameters, api),
     takeLatest(EventsTypes.PARTICIPATE, participate, api),
-    takeLatest(EventsTypes.CREATE_EVENT, createEvent, api),
-    takeLatest(UploadTypes.UPLOAD_IMAGE, uploadImage, api),
     takeLatest(PollTypes.FETCH_POLLS, fetchPolls, api),
     takeLatest(PollTypes.REFRESH_POLLS, refreshPolls),
     takeLatest(FCMTypes.GET_INITIAL_NOTIFICATION, getInitialNotification),

@@ -1,5 +1,4 @@
 import styles from './PlacesSearchStyles'
-import addressStyles from '../CreateEvent/Styles/AddressSearchStyles'
 
 export const GPAstyles = {
   container: styles.container,
@@ -8,13 +7,4 @@ export const GPAstyles = {
   listView: styles.listView,
   poweredContainer: styles.poweredContainer,
   description: styles.description
-}
-
-export const addressInputStyles = {
-  container: addressStyles.container,
-  textInput: addressStyles.textInput,
-  textInputContainer: addressStyles.textInputContainer,
-  listView: addressStyles.listView,
-  poweredContainer: addressStyles.poweredContainer,
-  description: addressStyles.description
 }

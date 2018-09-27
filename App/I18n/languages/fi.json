@@ -53,7 +53,6 @@
   "today": "tänään",
   "thisWeek": "tällä viikolla",
   "tomorrow": "huomenna",
-  "createEvent": "Lisää tapahtuma",
   "eventName": "Tapahtuman nimi",
   "eventDesc": "Tapahtuman kuvaus",
   "eventType": "Tapahtuman kategoria / tyyppi",
@@ -112,7 +111,6 @@
   "selectionError": "Jokin meni mönkään - valintoja ei voitu tallentaa. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "noEventsFound": "Tapahtumia ei löytynyt. Laajenna hakuasi, niin voi tärpätä !",
   "fetchError": "Jokin meni mönkään - tapahtumia ei voitu hakea. Kokeile uudestaan ja tarkista verkkoyhteys.",
-  "createError": "Jokin meni mönkään - tapahtumaa ei voitu luoda. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "pollFetchError": "Jokin meni mönkään - kyselyitä ei voitu hakea. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "pollSubmitError": "Jokin meni mönkään - kyselyn vastaus ei mennyt perille. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "deleteError": "Jokin meni mönkään - tilastoja ei voitu poistaa. Kokeile uudestaan ja tarkista verkkoyhteys.",
@@ -120,7 +118,6 @@
   "logoutError": "Jokin meni mönkään - uloskirjautuminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "participateError": "Jokin meni mönkään - osallistuminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "loginError": "Jokin meni mönkään. Tarkista verkkoyhteys ja käynnistä ohjelma uudestaan.",
-  "imageUploadError": "Jokin meni mönkään - kuvan lataaminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "links": "Linkkipankki",
   "linkFetchError": "Jokin meni mönkään - linkkejä ei voitu hakea. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "linkOpenError": "Jokin meni mönkään - sivua ei voitu avata. Kokeile uudestaan ja tarkista verkkoyhteys."
