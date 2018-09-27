@@ -10,6 +10,7 @@ import PollsScreen from '../Containers/PollsScreen'
 import PollScreen from '../Containers/PollScreen'
 import InstructionsScreen from '../Containers/InstructionsScreen'
 import LinksScreen from '../Containers/LinksScreen'
+import WebViewScreen from '../Containers/WebViewScreen'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
@@ -23,7 +24,8 @@ const PrimaryNav = StackNavigator({
   PollsScreen: { screen: PollsScreen },
   PollScreen: { screen: PollScreen },
   InstructionsScreen: { screen: InstructionsScreen },
-  LinksScreen: { screen: LinksScreen }
+  LinksScreen: { screen: LinksScreen },
+  WebViewScreen: { screen: WebViewScreen }
 }, {
   // Default config for all screens
   initialRouteName: 'EventsScreen',
