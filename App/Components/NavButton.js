@@ -6,9 +6,10 @@ import styles from './Styles/NavButtonStyles'
 
 export default class NavButton extends React.PureComponent {
   renderBtnContent = () => {
-    const { loading, icon } = this.props
+    const { loading, icon, renderIcon } = this.props
     if (loading) return <ActivityIndicator size='small' color={Colors.white} />
     else if (icon) return <Icon name={icon} size={24} color={Colors.white} />
+    else if (renderIcon) return renderIcon()
     return null
   }
 
