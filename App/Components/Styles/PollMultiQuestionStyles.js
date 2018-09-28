@@ -7,7 +7,8 @@ export default StyleSheet.create({
     fontSize: 18,
     color: Colors.pollQuestion,
     alignSelf: 'center',
-    marginVertical: 30
+    marginVertical: 30,
+    paddingHorizontal: 10
   },
   buttonsContainer: {
     justifyContent: 'center',
