@@ -9,31 +9,13 @@ import ErrorMessage from '../Components/ErrorMessage'
 import { Colors } from '../Themes'
 import styles from './Styles/LinksScreenStyles'
 
-const LINKS = [
-  {
-    title: 'Oulun kaupunki',
-    href: 'https://www.ouka.fi/etusivu',
-    openInWebView: true
-  },
-  {
-    title: 'Kirjasto',
-    href: 'https://www.ouka.fi/oulu/kirjasto',
-    openInWebView: false
-  },
-  {
-    title: 'Google',
-    href: 'https://google.fi/',
-    openInWebView: false
-  }
-]
-
 class LinksScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     header: <BackHeader title={I18n.t('links')} back={navigation.goBack} />
   })
 
   componentDidMount () {
-    // this.props.fetchLinks()
+    this.props.fetchLinks()
   }
 
   open = (item) => {
@@ -59,14 +41,14 @@ class LinksScreen extends React.Component {
   }
 
   renderPage = () => {
-    const { fetching } = this.props
+    const { fetching, links } = this.props
     if (fetching) {
       return <ActivityIndicator size='large' color={Colors.loginHeader} style={styles.loader} />
     }
     return (
       <View style={styles.container}>
         <FlatList
-          data={LINKS}
+          data={links}
           keyExtractor={this.keyExtractor}
           renderItem={this.renderItem}
           ItemSeparatorComponent={this.renderSeparator}

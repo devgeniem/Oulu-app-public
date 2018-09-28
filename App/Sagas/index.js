@@ -11,6 +11,7 @@ import { UserTypes } from '../Redux/UserRedux'
 import { PollTypes } from '../Redux/PollRedux'
 import { FCMTypes } from '../Redux/FCMRedux'
 import { AdsTypes } from '../Redux/AdsRedux'
+import { LinksTypes } from '../Redux/LinksRedux'
 
 /* ------------- Sagas ------------- */
 
@@ -20,6 +21,7 @@ import { fetchToken, login, logout, updateSearchParameters, deleteStatistics, up
 import { getInitialNotification, openNotification } from './FCMSagas'
 import { fetchPolls, isPollFinished, refreshPolls, submitPoll, getPollCount } from './PollSagas'
 import { fetchAds } from './AdsSagas'
+import { fetchLinks } from './LinksSagas'
 
 /* ------------- API ------------- */
 
@@ -49,6 +51,7 @@ export default function * root () {
     takeLatest(PollTypes.GET_POLL_COUNT, getPollCount),
     takeLatest(UserTypes.DELETE_STATISTICS, deleteStatistics, api),
     takeLatest(AdsTypes.FETCH_ADS, fetchAds, api),
-    takeLatest(UserTypes.UPDATE_USER, updateUser, api)
+    takeLatest(UserTypes.UPDATE_USER, updateUser, api),
+    takeLatest(LinksTypes.FETCH_LINKS, fetchLinks, api)
   ])
 }
