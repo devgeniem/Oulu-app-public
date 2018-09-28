@@ -6,15 +6,7 @@ import { Colors } from '../Themes'
 import {EVENT_CULTURE, EVENT_MUSIC, EVENT_SPORTS} from '../Transforms/Constants'
 import { MAIN_CATEGORIES } from '../Transforms/CategoryTypes'
 
-const MAX_SUBCATEGORY_COUNT = 6
-
 export default class EventListHeader extends React.PureComponent {
-  renderCount = () => {
-    const { subcategories } = this.props
-    if (subcategories.length) return subcategories.length
-    return MAX_SUBCATEGORY_COUNT
-  }
-
   isSelected = (category) => {
     const { maincategories } = this.props
     return maincategories.includes(category)
@@ -51,7 +43,6 @@ export default class EventListHeader extends React.PureComponent {
         <CategoryIcon icon='note' size={20} color={Colors.white} extraStyle={this.categoryIconStyle(EVENT_MUSIC)} />
         <CategoryIcon icon='baseball' size={20} color={Colors.white} extraStyle={this.categoryIconStyle(EVENT_SPORTS)} />
         <CategoryIcon icon='mask' size={16} color={Colors.white} extraStyle={this.categoryIconStyle(EVENT_CULTURE)} />
-        <CategoryIcon count={this.renderCount()} extraStyle={styles.count} />
       </View>
     )
   }
