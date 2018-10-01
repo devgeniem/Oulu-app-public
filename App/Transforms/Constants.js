@@ -237,3 +237,65 @@ export const MAP_STYLE = [
     ]
   }
 ]
+
+export const INSTRUCTIONS = {
+  html1: `
+  <h2>Yleistä</h2>
+  <p>Näppi on Oulun kaupungin tarjoama palvelu, joka on ensisijaisesti suunnattu oululaisille nuorille ja nuorille aikuisille.</p>
+  <p>Sovellus tuo taskuusi alueen tapahtumat sekä nuorille suunnatut kyselyt/äänestykset, joiden kautta voit vaikuttaa kotikaupunkisi asioihin. Linkkipankista löydät myös Oulun alueen hyödyllisiä palveluita.</p>
+  <h2>Tapahtumien luominen</h2>
+  <p>Tapahtumat luodaan yhteistyössä Kalevan tapahtumakalenterin kanssa. Luodaksesi tapahtumia mene <a href="https://www.kaleva.fi/menot/ilmoittajat/kirjaudu/?next=/menot/ilmoittajat/">Kalevan tapahtumasivulle</a> ja luo itsellesi ilmainen tunnus, joka mahdollistaa tapahtumien luomisen. Sovellus kerää nuorille suunnatut tapahtumat ja kategoriat Kalevan tapahtumista ja tuo ne sovellukseen.</p>
+  <p>Kategoriat, jotka tuodaan Kalevan tapahtumista:</p>
+  `,
+  html2: `
+  <p>Kalevan tapahtumia voivat luoda yritykset, yhteisöt ja yksityiset henkilöt. Käyttäjä hyväksyy <a href="https://www.kaleva.fi/menot/ilmoittajat/kayttoehdot/">Kaleva365 Oy:n käyttö- ja sopimusehdot</a>.</p>
+  `,
+
+  tableHeader: ['Kategoria', 'Alakategoria'],
+  tableContent: [
+    {
+      title: 'Keikkakalenteri',
+      items: [
+        'Bändit ja keikat'
+      ]
+    },
+    {
+      title: 'Festivaalit'
+    },
+    {
+      title: 'Kulttuuri',
+      items: [
+        'Tanssi',
+        'Konsertit',
+        'Näytelmät',
+        'Musikaalit',
+        'Sirkus',
+        'Stand up',
+        'Muut'
+      ]
+    },
+    {
+      title: 'Urheilu',
+      items: [
+        'Pelit',
+        'Kilpailut',
+        'Liikunta',
+        'Ravit',
+        'Muut'
+      ]
+    },
+    {
+      title: 'Elokuvat'
+    },
+    {
+      title: 'Yhteisöt',
+      items: [
+        'Myyjäiset',
+        'Messut',
+        'Kurssit',
+        'Yhdistykset',
+        'Lemmikit'
+      ]
+    }
+  ]
+}

@@ -48,6 +48,7 @@
     "react-native-maps": "^0.18.3",
     "react-native-modal": "^4.1.1",
     "react-native-modal-datetime-picker": "^4.13.0",
+    "react-native-render-html": "^3.10.0",
     "react-native-safe-storage": "0.0.5",
     "react-native-vector-icons": "4.3.0",
     "react-navigation": "^1.0.0-beta.27",
