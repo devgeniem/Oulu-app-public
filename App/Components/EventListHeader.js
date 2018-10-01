@@ -8,12 +8,11 @@ import FilterIcons from './FilterIcons'
 
 export default class EventListHeader extends React.PureComponent {
   render () {
-    const { style, subcategories, maincategories, searchTerm, handleChangeSearchTerm, onSubmit } = this.props
+    const { style, maincategories, searchTerm, handleChangeSearchTerm, onSubmit } = this.props
     return (
       <Animated.View style={[styles.container, style]}>
         <Image source={Images.city_v2_header} style={styles.image} />
         <FilterIcons
-          subcategories={subcategories}
           maincategories={maincategories}
           containerExtraStyles={styles.iconContainer}
         />

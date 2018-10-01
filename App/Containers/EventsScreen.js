@@ -217,7 +217,6 @@ class EventsScreen extends React.Component {
             handleChangeSearchTerm={this.handleChangeSearchTerm}
             onSubmit={this.submit}
             searchTerm={searchTerm}
-            subcategories={searchParameters ? searchParameters.subcats : []}
             maincategories={searchParameters ? searchParameters.cats : []}
             style={{transform: [{translateY}]}}
           />

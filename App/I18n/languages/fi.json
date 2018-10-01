@@ -53,7 +53,6 @@
   "today": "tänään",
   "thisWeek": "tällä viikolla",
   "tomorrow": "huomenna",
-  "createEvent": "Lisää tapahtuma",
   "eventName": "Tapahtuman nimi",
   "eventDesc": "Tapahtuman kuvaus",
   "eventType": "Tapahtuman kategoria / tyyppi",
@@ -91,13 +90,6 @@
   "alreadyFilled": "Olet vastannut tähän kyselyyn aikaisemmin",
   "eventPolls": "Tapahtumaan liittyvät kyselyt",
   "instructions_header": "Käyttöohjeet",
-  "instructions_general": "Yleistä",
-  "instructions1": "Näppi on Oulun kaupungin tarjoama palvelu, joka on ensisijaisesti suunnattu alle kolmikymppisille Oulun nuorille. Käyttäjäkuntaan toivotaan kuitenkin mahdollisimman paljon väkeä ja palvelusta löytynee jokaiselle jotakin.",
-  "instructions2": "Näin vuoden 2018 alussa, palvelusta julkaistaan ensimmäinen versio, jossa käyttäjille tarjotaan Oulun tapahtumia sekä kyselyitä/äänestyksiä, joiden kautta voit vaikuttaa kotikaupunkisi asioihin.",
-  "instructions3": "Palvelua voidaan käyttää sekä kirjautuneena että kirjautumattomana käyttäjänä.",
-  "instructions_logging_in": "Kirjautuminen",
-  "instructions4": "Tarkoituksena on, että ensimmäisen vaiheen koekäytön jälkeen kuka tahansa voi rekisteröityä palveluun kirjautuneena käyttäjänä ja luoda tapahtumia.",
-  "instructions5": "Palvelun ensimmäisessä vaiheessa sovellukseen ei voi itsenäisesti rekisteröityä kuka vain. Oulun kaupunki luo tunnuksia ja antaa näin rajatusti oikeuksia yksityishenkilöille luoda omia tapahtumia.",
   "email": "sähköposti",
   "yourStats": "Käyttötilastosi",
   "delStats": "Poista kerätyt tiedot",
@@ -112,7 +104,6 @@
   "selectionError": "Jokin meni mönkään - valintoja ei voitu tallentaa. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "noEventsFound": "Tapahtumia ei löytynyt. Laajenna hakuasi, niin voi tärpätä !",
   "fetchError": "Jokin meni mönkään - tapahtumia ei voitu hakea. Kokeile uudestaan ja tarkista verkkoyhteys.",
-  "createError": "Jokin meni mönkään - tapahtumaa ei voitu luoda. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "pollFetchError": "Jokin meni mönkään - kyselyitä ei voitu hakea. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "pollSubmitError": "Jokin meni mönkään - kyselyn vastaus ei mennyt perille. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "deleteError": "Jokin meni mönkään - tilastoja ei voitu poistaa. Kokeile uudestaan ja tarkista verkkoyhteys.",
@@ -120,5 +111,7 @@
   "logoutError": "Jokin meni mönkään - uloskirjautuminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "participateError": "Jokin meni mönkään - osallistuminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys.",
   "loginError": "Jokin meni mönkään. Tarkista verkkoyhteys ja käynnistä ohjelma uudestaan.",
-  "imageUploadError": "Jokin meni mönkään - kuvan lataaminen epäonnistui. Kokeile uudestaan ja tarkista verkkoyhteys."
+  "links": "Linkkipankki",
+  "linkFetchError": "Jokin meni mönkään - linkkejä ei voitu hakea. Kokeile uudestaan ja tarkista verkkoyhteys.",
+  "linkOpenError": "Jokin meni mönkään - sivua ei voitu avata. Kokeile uudestaan ja tarkista verkkoyhteys."
 }

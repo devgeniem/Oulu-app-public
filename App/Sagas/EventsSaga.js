@@ -1,7 +1,5 @@
 import EventsActions from '../Redux/EventsRedux'
-import UploadActions from '../Redux/UploadRedux'
 import FCMActions from '../Redux/FCMRedux'
-import { NavigationActions } from 'react-navigation'
 import moment from 'moment'
 import { put, call, select } from 'redux-saga/effects'
 import {
@@ -119,22 +117,5 @@ export function * participate (api, action) {
   } else {
     const error = checkErrorType(response)
     yield put(EventsActions.participateError(error))
-  }
-}
-
-export function * createEvent (api, action) {
-  const state = yield select(userState)
-  const token = state.token
-  const { event } = action
-
-  const response = yield call(api.createEvent, token, event)
-
-  if (response.ok) {
-    yield put(EventsActions.createEventSuccess(response.data))
-    yield put(UploadActions.resetUpload())
-    yield put(NavigationActions.navigate({ routeName: 'EventsScreen' }))
-  } else {
-    const error = checkErrorType(response)
-    yield put(EventsActions.createEventError(error))
   }
 }

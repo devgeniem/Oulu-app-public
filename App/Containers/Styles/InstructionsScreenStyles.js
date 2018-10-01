@@ -10,15 +10,43 @@ export default StyleSheet.create({
   contentContainer: {
     paddingBottom: 40
   },
-  header: {
-    color: Colors.instructionText,
-    fontFamily: Fonts.type.medium,
-    fontSize: 18
+  tableContainer: {
+    borderTopWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: Colors.instructionText,
+    marginBottom: 24,
+    marginTop: 8
   },
-  text: {
+  row: {
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    flexDirection: 'row'
+  },
+  column: {
+    flex: 1,
+    flexDirection: 'column',
+    padding: 6,
+    borderBottomWidth: 1,
+    borderRightWidth: 1,
+    borderColor: Colors.instructionText
+  },
+  headerColumn: {
+    flex: 1,
+    flexDirection: 'column',
+    padding: 6,
+    backgroundColor: Colors.instructionText,
+    borderBottomWidth: 1,
+    borderRightWidth: 1,
+    borderColor: Colors.instructionText
+  },
+  tableText: {
     color: Colors.instructionText,
     fontFamily: Fonts.type.base,
-    fontSize: 13,
-    marginVertical: 15
+    fontSize: 13
+  },
+  tableHeaderText: {
+    color: Colors.white,
+    fontFamily: Fonts.type.base,
+    fontSize: 13
   }
 })

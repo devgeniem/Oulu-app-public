@@ -39,7 +39,7 @@ const create = (baseURL = 'https://ouluappapi.production.geniem.io/api/') => {
     { categories, subcategories, from, to, search, limit, page },
     {headers: { 'Authorization': `Bearer ${token}` }}
   )
-  const fetchAds = (token) => api.get('/ad', {}, {headers: { 'Authorization': `Bearer ${token}` }})
+  const fetchAds = (token) => api.get('/ad', { mobile: true }, {headers: { 'Authorization': `Bearer ${token}` }})
   const anonUser = (deviceid) => api.post('/anonuser', { deviceid })
   const login = (username, password) => api.post('/login', { username, password })
   const logout = (token) => api.get('/logout', {}, {headers: { 'Authorization': `Bearer ${token}` }})
@@ -51,9 +51,8 @@ const create = (baseURL = 'https://ouluappapi.production.geniem.io/api/') => {
   const fetchPolls = (token) => api.get('/voting', {}, {headers: { 'Authorization': `Bearer ${token}` }})
   const submitPoll = (token, answers, id) => api.post(`votingresult/${id}`, { answers }, {headers: { 'Authorization': `Bearer ${token}` }})
   const participate = (token, userId, eventId) => api.post(`event/${eventId}/participate`, {user: userId}, {headers: { 'Authorization': `Bearer ${token}` }})
-  const uploadImage = (dataUri, filename, filetype) => api.post('imageupload', {data_uri: dataUri, filename, filetype})
   const deleteStatistics = (token) => api.post('me/deleteStatistics', {}, {headers: { 'Authorization': `Bearer ${token}` }})
-  const createEvent = (token, event) => api.post(`event`, event, {headers: { 'Authorization': `Bearer ${token}` }})
+  const fetchLinks = (token) => api.get('links', {}, {headers: { 'Authorization': `Bearer ${token}` }})
 
   // ------
   // STEP 3
@@ -79,12 +78,11 @@ const create = (baseURL = 'https://ouluappapi.production.geniem.io/api/') => {
     deactivateDevice,
     fetchPolls,
     participate,
-    createEvent,
-    uploadImage,
     submitPoll,
     deleteStatistics,
     fetchAds,
-    updateUser
+    updateUser,
+    fetchLinks
   }
 }
 

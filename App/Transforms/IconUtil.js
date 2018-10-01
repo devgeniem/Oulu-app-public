@@ -11,7 +11,7 @@ const margin = size === 18 ? 8 : 6
 
 export default class IconUtil {
   static renderSubCategoryIcons = (subcats) => {
-    if (subcats) {
+    if (subcats && Array.isArray(subcats)) {
       /* Render all event subcategories */
       const subcategories = subcats.map((subcat, index) => {
         /* Find the given subcategory */

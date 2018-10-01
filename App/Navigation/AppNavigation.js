@@ -4,12 +4,13 @@ import EventScreen from '../Containers/EventScreen'
 import MenuScreen from '../Containers/MenuScreen'
 import TimeSelectionScreen from '../Containers/TimeSelectionScreen'
 import EventTypesSelectionScreen from '../Containers/EventTypesSelectionScreen'
-import LoginScreen from '../Containers/LoginScreen'
 import ProfileScreen from '../Containers/ProfileScreen'
 import MapScreen from '../Containers/MapScreen'
 import PollsScreen from '../Containers/PollsScreen'
 import PollScreen from '../Containers/PollScreen'
 import InstructionsScreen from '../Containers/InstructionsScreen'
+import LinksScreen from '../Containers/LinksScreen'
+import WebViewScreen from '../Containers/WebViewScreen'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
@@ -18,12 +19,13 @@ const PrimaryNav = StackNavigator({
   MenuScreen: { screen: MenuScreen },
   TimeSelectionScreen: { screen: TimeSelectionScreen },
   EventTypesSelectionScreen: { screen: EventTypesSelectionScreen },
-  LoginScreen: { screen: LoginScreen },
   ProfileScreen: { screen: ProfileScreen },
   MapScreen: { screen: MapScreen },
   PollsScreen: { screen: PollsScreen },
   PollScreen: { screen: PollScreen },
-  InstructionsScreen: { screen: InstructionsScreen }
+  InstructionsScreen: { screen: InstructionsScreen },
+  LinksScreen: { screen: LinksScreen },
+  WebViewScreen: { screen: WebViewScreen }
 }, {
   // Default config for all screens
   initialRouteName: 'EventsScreen',
