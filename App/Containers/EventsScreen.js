@@ -170,7 +170,8 @@ class EventsScreen extends React.Component {
   **/
 
   onEndReached = () => {
-    if (!this.props.fetching && !this.props.fetchingMore && !this.props.allFetched) {
+    const { fetching, fetchingMore, allFetched, events } = this.props
+    if (events.length && !fetching && !fetchingMore && !allFetched) {
       const searchTerm = this.state.searchTerm || null
       this.props.fetchMoreEvents(searchTerm)
     }
