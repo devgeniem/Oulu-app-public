@@ -100,7 +100,11 @@ export function * fetchToken (api, action) {
     }
   } else {
     /* Show permission prompt for the first call (iOS) */
-    FCM.requestPermissions()
+    try {
+      yield call(FCM.requestPermissions)
+    } catch (error) {
+
+    }
     /* Get token for push notifications */
     const deviceid = yield call(FCM.getFCMToken)
     console.log('Anon device id: ' + deviceid)
