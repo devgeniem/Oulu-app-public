@@ -9,7 +9,7 @@
 
 #import "AppDelegate.h"
 #import "RNFIRMessaging.h"
-
+#import <React/RCTLog.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
@@ -35,6 +35,7 @@
 
   [FIRApp configure];
   [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+  RCTSetLogThreshold(RCTLogLevelInfo - 1);
 
   return YES;
 }
