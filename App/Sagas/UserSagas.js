@@ -101,12 +101,16 @@ export function * fetchToken (api, action) {
   } else {
     /* Show permission prompt for the first call (iOS) */
     try {
-      yield call(FCM.requestPermissions)
+      FCM.requestPermissions()
     } catch (error) {
 
     }
     /* Get token for push notifications */
     const deviceid = yield call(FCM.getFCMToken)
+
+    // Try again
+    if (!deviceid) return yield put(UserActions.fetchToken())
+
     console.log('Anon device id: ' + deviceid)
     /* Identify as anonymous user with device id */
     const anonResponse = yield call(api.anonUser, deviceid)
