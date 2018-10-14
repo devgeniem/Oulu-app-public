@@ -8,6 +8,7 @@ import FCMActions from '../Redux/FCMRedux'
 import ReduxPersist from '../Config/ReduxPersist'
 import { Colors } from '../Themes'
 import styles from './Styles/RootContainerStyles'
+import { isIphoneX } from 'react-native-iphone-x-helper'
 
 class RootContainer extends Component {
   componentDidMount () {
@@ -68,10 +69,18 @@ class RootContainer extends Component {
     }
   }
 
+  renderExtraStatusBar = () => {
+    if (isIphoneX()) {
+      return <View style={styles.extraStatusBar} />
+    }
+    return null
+  }
+
   render () {
     return (
       <View style={styles.applicationView}>
         {this.renderStatusBar()}
+        {this.renderExtraStatusBar()}
         <ReduxNavigation />
       </View>
     )

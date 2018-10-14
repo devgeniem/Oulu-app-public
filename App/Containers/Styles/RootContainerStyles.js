@@ -9,5 +9,10 @@ export default StyleSheet.create({
     height: 20,
     zIndex: 2,
     backgroundColor: Colors.black
+  },
+  extraStatusBar: {
+    height: 24,
+    zIndex: 2,
+    backgroundColor: Colors.black
   }
 })
