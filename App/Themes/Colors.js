@@ -36,7 +36,8 @@ const colors = {
   pollButtonUnderlay: '#3e6ce0',
   sponsoredRed: '#DD0011',
   errorMessageBackground: '#F5F5F5',
-  noEvents: '#9E1F5F'
+  noEvents: '#9E1F5F',
+  iosStatusBar: '#111111'
 }
 
 export default colors
