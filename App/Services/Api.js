@@ -16,8 +16,8 @@ const create = (baseURL = 'https://ouluappapi.production.geniem.io/api/') => {
     headers: {
       'Cache-Control': 'no-cache'
     },
-    // 10 second timeout...
-    timeout: 10000
+    // 30 second timeout...
+    timeout: 30000
   })
 
   // ------

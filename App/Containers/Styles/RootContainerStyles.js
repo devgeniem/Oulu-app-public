@@ -8,6 +8,11 @@ export default StyleSheet.create({
   statusBar: {
     height: 20,
     zIndex: 2,
-    backgroundColor: Colors.black
+    backgroundColor: Colors.iosStatusBar
+  },
+  extraStatusBar: {
+    height: 24,
+    zIndex: 2,
+    backgroundColor: Colors.iosStatusBar
   }
 })
